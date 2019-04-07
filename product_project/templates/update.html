@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #hid1{
+            color:red;
+            font-style: italic;
+        }
+
+        i{
+            color:red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body bgcolor="#ffe4c4">
+<center>
+<marquee behavior="alternate" width="100%"><h1>Welcome to<i>Project Info</i>Project</h1></marquee>
+    <h1 id="hid1"><center>Please Enter your Product Details</center></h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <b>Product Id :</b> {{ form.pid }}<br/><br/>
+    <b>Product Cost :</b> {{ form.pcost }}<br/><br/>
+    <br/>
+
+    <input type="submit" value="Submit"/>
+</form>
+<h3><a href="/productapp/home">Click here to go to Home</a></h3>
+</center>
+</body>
+</html>

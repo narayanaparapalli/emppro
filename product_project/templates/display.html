@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #hid1{
+            color:red;
+            font-style: italic;
+        }
+
+        i{
+            color:red;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body bgcolor="aqua">
+<marquee behavior="alternate" width="100%"><h1>Welcome to<i>Project Info</i>Project</h1></marquee>
+    <h1 id="hid1"><center> Product Details</center></h1>
+<center>
+<table border="5" height="10%" width="70%">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Cost</th>
+        <th>Product Color</th>
+        <th>Product Mf_date</th>
+        <th>Product Ex_date</th>
+    </tr>
+
+    {% for prod in det %}
+    <tr>
+        <td>{{ prod.pid }}</td>
+        <td>{{ prod.pname }}</td>
+        <td>{{ prod.pcost }}</td>
+        <td>{{ prod.pcolor }}</td>
+        <td>{{ prod.pmfd }}</td>
+        <td>{{ prod.pexfd }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h3><a href="/productapp/home">Click here to go to Home</a></h3>
+</center>
+</body>
+</html>

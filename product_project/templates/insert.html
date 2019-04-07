@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #hid1{
+            color:red;
+            font-style: italic;
+        }
+
+        i{
+            color:red;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body bgcolor="#ee82ee">
+<marquee behavior="alternate" width="100%"><h1>Welcome to<i>Project Info</i>Project</h1></marquee>
+<h1 id="hid1"><center>Please Enter your Product Details</center></h1>
+
+<form action="" method="post" align="center">
+    {% csrf_token %}
+    <center>
+    <fieldset style="width:40%; background:aliceblue">
+        <legend align="center" style="color:red">Product Details :</legend>
+<table  height="10%" width="70%" align="center">
+    <tr>
+        <td><b>Product id    :</b></td><td>{{ form.pid }} <br/><br/></td>
+    </tr>
+    <tr>
+        <td><b>Product Name :</b></td><td> {{ form.pname }} <br/><br/></td>
+    </tr>
+    <tr>
+        <td><b>Product Cost :</b></td><td> {{ form.pcost }} <br/><br/></td>
+    </tr>
+    <tr>
+        <td><b>Product Color :</b></td><td> {{ form.pcolor }} <br/><br/></td>
+    </tr>
+    <tr>
+        <td><b>Product mfg :</b></td><td> {{ form.pmfd }} <br/><br/></td>
+    </tr>
+    <tr>
+        <td><b>Product exd :</b></td><td> {{ form.pexfd }} <br/><br/></td>
+    </tr>
+    <tr>
+
+        <td><center><input type="submit" value="Insert"></center></td>
+    </tr>
+</table>
+    </fieldset>
+    </center>
+</form>
+<center>
+<h3><a href="/productapp/home">Click here to go to Home</a></h3>
+</center>
+</body>
+</html>
